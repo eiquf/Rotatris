@@ -1,0 +1,70 @@
+# How to Play — Rotatris Prototype (PC)
+
+## Starting the game
+
+1. Double-click the `.exe` to launch it.
+2. Click into the game window once it opens — Windows only sends
+   keyboard input to whichever window currently has focus, so if you
+   click elsewhere first, the controls below won't respond.
+
+That's it — the board, camera, and score panel all appear automatically
+as soon as the game starts.
+
+## The goal
+
+A fixed **core cell** sits on the floor at the bottom-center of the board.
+Standard falling blocks (tetrominoes) drop from above, one at a time, and
+you steer them to build a structure around the core.
+
+A **highlighted 5×5 zone** sits directly above the core. That zone must
+never be left with a gap that's sealed off from above — do that, and it's
+game over on the spot. Everywhere else on the board, gaps are fine.
+
+## Controls
+
+| Action                     | Key(s)                  |
+|----------------------------|--------------------------|
+| Move piece left            | `A` or `←`               |
+| Move piece right           | `D` or `→`               |
+| Soft drop (fall faster)    | `S` or `↓` (hold)        |
+| Hard drop (drop instantly) | `Space`                  |
+| Rotate clockwise           | `W`, `X`, or `↑`         |
+| Rotate counter-clockwise   | `Z`                      |
+| Hold / swap piece          | `C`                      |
+| Pause / resume             | `P` or `Esc`             |
+| Restart (after game over)  | `R`                      |
+
+## Reading the screen
+
+- **Colored squares** on the board = locked, permanent structure. The
+  off-white square at the bottom-center is the core — it never moves.
+- **Solid colored piece** = the block you're currently controlling.
+- **Faint, transparent copy of the piece below it** = the ghost preview,
+  showing exactly where it will land if you don't move it further.
+- **Faint yellow-tinted 5×5 area above the core** = the target zone — keep
+  it gap-free.
+- **Right-side panel** = Score, Best (your all-time high, saved between
+  sessions), your currently held piece, and the next 3 pieces coming up.
+
+## Tips
+
+- Use **Hold** (`C`) to bank an awkward piece for later — you can only
+  hold once per piece, until the next one locks in.
+- Watch the **ghost preview**, not just the falling piece — it tells you
+  exactly where a piece will settle before you commit.
+- A piece that bridges over an open column can trap air underneath it —
+  that's fine almost everywhere, but fatal if it happens inside the
+  highlighted zone.
+- If controls stop responding but the piece is still falling on its own,
+  make sure the game window is focused/clicked — that's the most common
+  cause. If it still doesn't respond, the project's Input settings may
+  need adjusting before rebuilding (see the developer `README.md`'s
+  Troubleshooting section).
+
+## Ending the game
+
+The game ends when either:
+1. A new piece has nowhere valid to appear (the stack reached the top), or
+2. A piece locks in a way that seals a gap inside the highlighted zone.
+
+Press **R** at the game-over screen to start a new run instantly.
