@@ -89,6 +89,3 @@ falls on its own):**
 Reference-matching visual theme, menus, settings panels, sound, and
 animation polish — the assignment explicitly scopes these out in favor of
 correct, legible core mechanics.
-
-See `WRITEUP.md` for the design write-up (how the attachment logic works,
-assumptions made, and what I'd improve with more time).
